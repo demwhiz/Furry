@@ -1,0 +1,26 @@
+GameName = "🐾 Furry Outfit Ideas" 
+
+tab1name = "Main" 
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))() 
+
+local GameName = Library:NewWindow(GameName) 
+
+local Tab1 = GameName:NewSection(tab1name) 
+
+Tab1:CreateButton("Instant UGC", function(value)
+local id = 17257835215 
+
+for i,v in pairs(game:GetDescendants()) do
+if v:IsA("RemoteEvent") then
+v:FireServer(id)
+if v:IsA("BindableEvent") then
+v:Fire(id)
+if v:IsA("RemoteFunction") then
+v:InvokeServer(id)
+end
+end
+end
+end
+end)
+local Tab2 = GameName:NewSection("furrylovers")
